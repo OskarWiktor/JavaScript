@@ -395,3 +395,44 @@ console.log(jonas); //dodanie elementów
 // Challenge
 console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`);
 */
+
+// obiekty w obiekcie, object methods
+
+/*
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtmann',
+    birthYear: 1991,
+    job: 'teacher',
+    friends: ['Michael', 'Peter', 'Steven'],
+    hasDriversLicense: true,
+    
+    //calcAge: function(birthYear) {
+    //    return 2037 - birthYear;
+    //} // każda funkcja dodana w obiekcie to metoda
+
+    //calcAge: function() {
+    //    // console.log(this);
+    //    return 2037 - this.birthYear;
+    //}
+
+    calcAge: function () {
+        this.age = 2037 - this.birthYear;
+        return this.age;
+    },
+
+    getSummary: function() {
+        return `${this.firstName} is a ${this.calcAge()}-years old ${jonas.job}, and he has ${this.hasDriversLicense ? 'a' : 'no'} driver's license`
+    },
+};
+
+//console.log(jonas.calcAge(1991));
+//console.log(jonas['calcAge'](1991));
+
+console.log(jonas.calcAge());
+console.log(jonas.age);
+
+//Challenge 
+console.log(jonas.getSummary());
+
+*/
