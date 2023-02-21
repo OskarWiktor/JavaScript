@@ -45,7 +45,7 @@ function calcAge1(birthYear) {
 }
 
 console.log(age1); 
-// to deklaracja funkcji, function declaration
+// function declaration
 // deklarację możemy wywołać przed zdefiniowaniem samej funkcji, expression nie. Aczkolweik nie jest to najlepszy pomysł
 
 
@@ -192,10 +192,10 @@ let avgKoalas = calcAverage(65, 54, 49);
 console.log(avgDolphins);
 console.log(avgKoalas);
 
-const checkWinner =  function (avgDolphins, avgKoalas) {
-    if(avgDolphins >= avgKoalas * 2) {
+const checkWinner = function (avgDolphins, avgKoalas) {
+    if(avgDolphins > avgKoalas * 2) {
         console.log(`Dolphins win (${avgDolphins} vs ${avgKoalas})`);
-    } else if (avgKoalas >= avgDolphins * 2) {
+    } else if (avgKoalas > avgDolphins * 2) {
         console.log (`Koalas win (${avgKoalas} vs ${avgDolphins})`);
     } else {
         console.log(`no winer`);
@@ -351,88 +351,5 @@ const total = [tips[0] + bills[0], tips[1] + bills[1], tips[2] + bills[2]];
 
 console.log(tips);
 console.log(total);
-
-*/
-
-
-// Obiekty
-
-/*
-const jonas = {
-    firstName: 'Jonas',
-    lastName: 'Schmedtmann',
-    age: 2037 - 1991,
-    job: 'teacher',
-    friends: ['Michael', 'Peter', 'Steven']
-}
-// literal syntax
-// arrays - ordered data, object - unstrocted data
-
-console.log(jonas)
-
-//wydobywanie wartości
-console.log(jonas.lastName)
-console.log(jonas['lastName']) // tutaj możemy dać expression
-
-const nameKey = 'Name';
-console.log(jonas['first' + nameKey]);
-console.log(jonas['last' + nameKey]);
-
-const interestedIn = prompt('What do you want to know about Jonas? Choose between firstName, lastName, age, job and friends');
-console.log(jonas[interestedIn]); 
-
-if(jonas[interestedIn]) {
-    console.log(jonas.interestedIn);
-} else {
-    console.log('Wrond request! Choose between firstName, lastName, age, job and friends')
-} // wykorzystanie falsy = wartości undefined jeśli któś wpiszę złą nazwę
-
-jonas.location = 'Portugal';
-jonas['twitter'] = '@jonasschmedtman'
-console.log(jonas); //dodanie elementów
-
-
-// Challenge
-console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`);
-*/
-
-// obiekty w obiekcie, object methods
-
-/*
-const jonas = {
-    firstName: 'Jonas',
-    lastName: 'Schmedtmann',
-    birthYear: 1991,
-    job: 'teacher',
-    friends: ['Michael', 'Peter', 'Steven'],
-    hasDriversLicense: true,
-    
-    //calcAge: function(birthYear) {
-    //    return 2037 - birthYear;
-    //} // każda funkcja dodana w obiekcie to metoda
-
-    //calcAge: function() {
-    //    // console.log(this);
-    //    return 2037 - this.birthYear;
-    //}
-
-    calcAge: function () {
-        this.age = 2037 - this.birthYear;
-        return this.age;
-    },
-
-    getSummary: function() {
-        return `${this.firstName} is a ${this.calcAge()}-years old ${jonas.job}, and he has ${this.hasDriversLicense ? 'a' : 'no'} driver's license`
-    },
-};
-
-//console.log(jonas.calcAge(1991));
-//console.log(jonas['calcAge'](1991));
-
-console.log(jonas.calcAge());
-console.log(jonas.age);
-
-//Challenge 
-console.log(jonas.getSummary());
 
 */
