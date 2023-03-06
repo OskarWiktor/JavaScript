@@ -18,6 +18,7 @@ document.querySelector('.check').addEventListener('click', function() {
         displayMessage('Correct Number! Click Again To Reset The Game');
         document.querySelector('body').style.backgroundColor = '#60b347';
         document.querySelector('.number').style.width = '30rem';
+        // highscore
         if(score > highscore) {
             highscore= score;
             document.querySelector('.highscore').textContent = highscore;
@@ -28,11 +29,13 @@ document.querySelector('.check').addEventListener('click', function() {
         displayMessage('No Number!');
         document.querySelector('body').style.backgroundColor = 'red';
 
-    //when guess is wrong
+    // when guess is wrong
     } else if (guess !== secretNumber) {
         score--;
         document.querySelector('.score').textContent = score;
+        document.querySelector('body').style.backgroundColor = '#222';
         displayMessage(guess > secretNumber ? 'Number Is Too High' : 'Number Is Too Low')
+        // score = 0
         if ( score < 1) {
             displayMessage('You lost the game. Click Again to Reset The Game')
             document.querySelector('body').style.backgroundColor = 'red';
@@ -41,6 +44,7 @@ document.querySelector('.check').addEventListener('click', function() {
     }
 });
 
+// restart game
 document.querySelector('.again').addEventListener('click', function() {
     secretNumber = Math.trunc(Math.random()*20)+1;
     score = 20;
