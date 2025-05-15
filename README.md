@@ -42,3 +42,10 @@ Each folder represents a self-contained module or mini-project:
 - Jest (basic testing)
 
 ---
+
+## 📌 Notes
+These projects were written while following a JavaScript course on Udemy
+
+All code is my own — even when based on guided content, I rewrote or extended logic independently
+
+Some projects are more polished, others remain basic practice
